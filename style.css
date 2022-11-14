@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.canva{
+    width: 40vw;
+    height: 40vw;
+    background-color: black;
+}
+@media (max-width: 600px){
+    .canva{
+        width: 95vw;
+        height: 95vw;
+        background-color: black;
+    }
+}
+#aaa{
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    border: 1px solid white;
+}
