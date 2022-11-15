@@ -1,4 +1,3 @@
-
 function colorChanger(elementId){
     let theElementHovered = document.getElementById(elementId);
     let stringBackgroundColor = theElementHovered.style.backgroundColor;
@@ -16,14 +15,13 @@ function squareGenerate(){
     let canvaElement = document.getElementById("canva");
     let squareAmount = document.getElementById("squareAmount").valueAsNumber;
     canvaElement.innerHTML = '';
+    canvaElement.style.gridTemplateColumns = `repeat(${squareAmount}, 1fr)`
+    canvaElement.style.gridTemplateRows = `repeat(${squareAmount}, 1fr)`
     for (let index = 0; index < squareAmount*squareAmount; index++) {
-        var newDivElement = document.createElement('div');
-        newDivElement.className = 'squareProperty';
-        newDivElement.style.cssText = `height: 24px;`;
-        newDivElement.style.cssText += `width: 24px;`;
-        newDivElement.style.cssText += `background-color: rgba(0, 0, 0, 0.01)`;
-    
+        const newDivElement = document.createElement('div');
+        newDivElement.style.cssText = `background-color: rgba(0, 0, 0, 0.01)`;
         newDivElement.setAttribute('id', `squareNum${index}`);
+        newDivElement.classList.add('squareProperty');
         newDivElement.addEventListener('mouseover', function(){
             colorChanger(this.id);
           });
