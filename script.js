@@ -1,7 +1,5 @@
-
-
-
-
+let squareFillMod = 0;
+let rainbowMod = 0;
 function colorChanger(elementId){
     let theElementHovered = document.getElementById(elementId);
     let stringBackgroundColor = theElementHovered.style.backgroundColor;
@@ -11,17 +9,22 @@ function colorChanger(elementId){
     }else{
         newColorIntensity = parseInt(stringBackgroundColor[16]) +1;
     }
-    let stringBackgroundModified = `rgba(0, 0, 0, 0.${newColorIntensity})`;
+    let rColorValue = 0;
+    let gColorValue = 0;
+    let bColorValue = 0;
+    let stringBackgroundModified;
+    if(rainbowMod == 1){
+        rColorValue = Math.floor(Math.random() * 255);
+        gColorValue = Math.floor(Math.random() * 255);
+        bColorValue = Math.floor(Math.random() * 255);
+    }else{
+        rColorValue = 0;
+        gColorValue = 0;
+        bColorValue = 0;
+    };
+    stringBackgroundModified = `rgba(${rColorValue}, ${gColorValue}, ${bColorValue}, ${squareFillMod}.${newColorIntensity})`;
     theElementHovered.style.backgroundColor = stringBackgroundModified;
 }
-
-function rainbowSwitch(){
-    console.log("aaa");
-}
-function solidFill(){
-    console.log("aaaa");
-}
-
 function squareGenerate(){
     let canvaElement = document.getElementById("canva");
     let squareAmount = document.getElementById("squareAmount").valueAsNumber;

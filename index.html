@@ -8,16 +8,18 @@
     <title>Etch a sketch</title>
 </head>
 <body>
-    <div class="gameTitle">
-        <h3>Etch a sketch</h3>
-    </div>
+    
     <main class="mainContent">
-        <section>
+        <section style="margin-top: 2.4vw;">
             <div class="interface">
                 <div class="interfaceMenu">
-                    <button type="submit" onclick="solidFill()">Solid</button>
-                    <button type="submit" onclick="rainbowSwitch()">Rainbow Mod</button>
-                    <button type="submit" onclick="squareGenerate()">Reset</button>
+                    <div class="gameTitle">
+                        <h3>Etch a sketch</h3>
+                    </div>
+                    <button type="submit" onclick="squareFillMod = 1">Solid Mod</button>
+                    <button type="submit" onclick="squareFillMod = 0; rainbowMod = 0">Soft Mod</button>
+                    <button type="submit" onclick="rainbowMod = 1">Rainbow Mod</button>
+                    <button type="submit" onclick="squareFillMod = 0; rainbowMod = 0; squareGenerate()">Reset</button>
                     <input type="range" name="" id="squareAmount" min="24" max="100" value="24">
                     <button type="submit" onclick="squareGenerate()">Generate</button>
                 </div>
