@@ -1,3 +1,7 @@
+
+
+
+
 function colorChanger(elementId){
     let theElementHovered = document.getElementById(elementId);
     let stringBackgroundColor = theElementHovered.style.backgroundColor;
@@ -9,6 +13,13 @@ function colorChanger(elementId){
     }
     let stringBackgroundModified = `rgba(0, 0, 0, 0.${newColorIntensity})`;
     theElementHovered.style.backgroundColor = stringBackgroundModified;
+}
+
+function rainbowSwitch(){
+    console.log("aaa");
+}
+function solidFill(){
+    console.log("aaaa");
 }
 
 function squareGenerate(){

@@ -8,22 +8,24 @@
     <title>Etch a sketch</title>
 </head>
 <body>
-    <header>
-        <div class="amount">
-            <input type="range" name="" id="squareAmount" min="24" max="100" value="24">
-            <button type="submit" onclick="squareGenerate()"> Generate </button>
-        </div>
-    </header>
-    
-    <section id="canva"></section>
-
-    <script src="script.js"></script>
-
-
-    
-    
-    
-    <footer style="text-align: center; margin-bottom: 10px;">
+    <div class="gameTitle">
+        <h3>Etch a sketch</h3>
+    </div>
+    <main class="mainContent">
+        <section>
+            <div class="interface">
+                <div class="interfaceMenu">
+                    <button type="submit" onclick="solidFill()">Solid</button>
+                    <button type="submit" onclick="rainbowSwitch()">Rainbow Mod</button>
+                    <button type="submit" onclick="squareGenerate()">Reset</button>
+                    <input type="range" name="" id="squareAmount" min="24" max="100" value="24">
+                    <button type="submit" onclick="squareGenerate()">Generate</button>
+                </div>
+            </div>
+            <div id="canva"></div>
+        </section>
+    </main>
+    <footer>
         <p>Copyright ©<script>
             document.write(new Date().getFullYear())
             </script><a href="https://github.com/Yokuny" target="_blank">
@@ -31,6 +33,7 @@
             </a>
         </p>
     </footer>
+    <script src="script.js"></script>
     <script>squareGenerate()</script>
     </body>
 </html>
